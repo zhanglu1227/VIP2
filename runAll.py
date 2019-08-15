@@ -3,6 +3,7 @@ import unittest
 import HTMLTestRunner
 import time
 import sys
+from common.SendMail import SendMail
 
 def run_case():
     # 定义报告存放路径
@@ -27,7 +28,10 @@ def run_case():
     fp.close()
 
 if __name__ == '__main__':
+    c = SendMail()
+    c.send_email()
     run_case()
+
 
 
 
